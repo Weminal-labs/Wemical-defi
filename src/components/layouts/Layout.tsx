@@ -38,12 +38,14 @@ const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <body className={btBeauSans.className}>
       <NextUIProvider>
-        <div className="flex">
-          <SideNav/>
-          <main className=" bg-black flex-1 min-h-screen">
-            <div className="w-full h-full flex md:ml-80">{children}</div>
-          </main>
-        </div>
+        <main className="flex">
+          <div className="flex w-full">
+            <SideNav />
+            <div className=" bg-black flex-1 min-h-screen md:ml-80 flex">
+              {children}
+            </div>
+          </div>
+        </main>
       </NextUIProvider>
     </body>
   );

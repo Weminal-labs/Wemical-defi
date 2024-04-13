@@ -1,10 +1,8 @@
 'use client';
-
 import React, { useState } from 'react';
-
-import { Link, Input } from '@nextui-org/react';
+import { Input } from '@nextui-org/react';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
 import { SIDENAV_ITEMS } from '@/common/constant';
 import { SideNavItem } from '@/common/types';
 import { Icon } from '@iconify/react';
@@ -78,9 +76,8 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
       ) : (
         <Link
           href={item.path}
-          isDisabled={item.isDisabled}
-          className={`flex flex-row space-x-4 items-center p-2 rounded-lg hover:bg-white/20 text-white ${
-            item.path === pathname ? '!bg-white text-black' : ''
+          className={`flex flex-row space-x-4 items-center p-2 rounded-lg hover:bg-white/20 ${
+            item.path === pathname ? '!bg-white text-black' : 'text-white'
           }`}
         >
           {item.icon}

@@ -74,10 +74,10 @@ export default function Home() {
             <div className="">
               <h1 className={`${Specify.className} text-5xl font-bold text-white uppercase`}>DEAR suians</h1>
               <p className="font-light text-[#CFCFCF] text-lg mt-5">let&apos;s create some cooking recipe with wemical</p>
-              <Link className="uppercase text-white mt-16 text-lg" href="/explore/recipe">Click to explore<IoIosArrowRoundForward className="text-4xl"/></Link>
+              <Link className="uppercase text-white mt-16 text-lg" href="/explore">Click to explore<IoIosArrowRoundForward className="text-4xl"/></Link>
             </div>
-            <div>
-              <Image src="/imgs/pill.png" alt="img"/>
+            <div className="flex justify-end">
+              <Image src="/imgs/pill.png" alt="img" className="w-1/2" removeWrapper/>
             </div>
           </div>
         </WrapperContent>
